@@ -57,7 +57,7 @@ def gas_dictionary(lst2:list[classes.Vehicle], cost_of_gas:float, budget:float)-
         except ZeroDivisionError:
             gas_cost = 0.0
         gas_per_month = gas_cost*30
-        amount_over = gas_per_month-monthly_gas_budget
+        amount_over = gas_per_month-(monthly_gas_budget/len(lst2))
         if amount_over >= 0:
             new_dict[vehicle.name_of_car] = ("Cost of gas per month in dollars", gas_per_month, "Amount over monthly budget in dollars", amount_over)
         if amount_over < 0:
