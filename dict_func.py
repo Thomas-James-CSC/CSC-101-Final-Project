@@ -2,7 +2,7 @@ import classes
 
 #dictionary_drive_time_persons/vehicles: Functions to print the dictionary that shows the time spent driving for each person and miles driven for each vehicle. Thomas James.
 
-def dictionary_drive_time_persons(lst1:list[classes.Driver])->dict|None:
+def dictionary_drive_time_persons(lst1:list[classes.Driver])-> dict | None:
     if lst1 is None:
         return None
     dict1 = {}
@@ -10,13 +10,14 @@ def dictionary_drive_time_persons(lst1:list[classes.Driver])->dict|None:
         dict1[lst1[i].name_of_driver, "(Daily drive time)"] = repr(lst1[i].time_driving_per_day)
     return dict1
 
-drivers_1 = [classes.Driver('Daughter', 17, classes.Time(1,0), 1, 2),
-             classes.Driver('Father', 45, classes.Time(1,15), 2, 1),
-             classes.Driver('Mother', 47, classes.Time(1,15), 2, 0)]
+drivers_1 = [classes.Driver('Daughter', 17, classes.Time(1, 0), 1, 2),
+             classes.Driver('Father', 45, classes.Time(1, 15), 2, 1),
+             classes.Driver('Mother', 47, classes.Time(1, 15), 2, 0)]
 
 print(dictionary_drive_time_persons(drivers_1))
 
-def dictionary_drive_miles_vehicles(lst2:list[classes.Vehicle])->dict|None:
+def dictionary_drive_miles_vehicles(lst2:list[
+    classes.Vehicle])-> dict | None:
     if lst2 is None:
         return None
     dict2 = {}
@@ -24,7 +25,7 @@ def dictionary_drive_miles_vehicles(lst2:list[classes.Vehicle])->dict|None:
         dict2[lst2[i].name_of_car, "(daily miles)"] = (lst2[i].miles_used_per_day)
     return dict2
 
-vehicles_1 = [classes.Vehicle('Tesla', 'Electric', 0.0, 30, 200 ),
+vehicles_1 = [classes.Vehicle('Tesla', 'Electric', 0.0, 30, 200),
               classes.Vehicle('Truck', 'Gas', 20.0, 15, 110),
               classes.Vehicle('Minivan', 'Gas', 28.0, 35, 105)]
 cost_of_gas = 4.0
@@ -35,7 +36,7 @@ print(dictionary_drive_miles_vehicles(vehicles_1))
 
 #dictionary_mpg: Prints the dictionary for the miles per gallon that each car has. Thomas James.
 
-def dictionary_mpg(lst2:list[classes.Vehicle])->dict|None:
+def dictionary_mpg(lst2:list[classes.Vehicle])-> dict | None:
     if lst2 is None:
         return None
     dict2 = {}
