@@ -271,7 +271,7 @@ while True:
     else:
         break
 
-#Supporting function:
+#Supporting function (Still works with them):
 def safety_rating(Driver) -> int:
     return Driver.driver_age-Driver.accident_count*10
 
